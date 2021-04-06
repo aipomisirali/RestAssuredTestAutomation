@@ -1,0 +1,14 @@
+CukesRunner\CucumberRunner.class
+Util\Pojos\GeoInfo.class
+Util\Pojos\FirstUserPOJO.class
+JUnitRestAssuredRequests\PutRequestJSon.class
+Util\Pojos\JSonResponseHelper.class
+org\example\CheckIfVowelsIsPresent.class
+StepDephs\PostReqStepdefs.class
+JUnitRestAssuredRequests\GetRequestInCucumber.class
+JUnitRestAssuredRequests\PostRequestRes.class
+org\example\AppTest.class
+Util\Pojos\Address.class
+org\example\JavaCodingChallenges.class
+org\example\SwapNumbers.class
+org\example\Fibonachisequense.class
