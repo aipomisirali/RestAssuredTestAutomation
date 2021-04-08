@@ -23,10 +23,8 @@ public class PostReqStepdefs {
     FirstUserPOJO user = new FirstUserPOJO();
     Address adressObj = new Address();
     GeoInfo GeoObect = new GeoInfo();
-
-    @Given("URI for API")
-    public void uri_for_api() {
-
+    @Given("^URI for API$")
+    public void uri_for_API() throws Throwable {
         GeoObect.setLat("-37.3159");
         GeoObect.setLng("81.1496");
         adressObj.setStreet("Kulas Light");
@@ -42,15 +40,15 @@ public class PostReqStepdefs {
         user.setAdressObject(adressObj);
     }
 
-    @When("user sends a post Request")
-    public void user_sends_a_post_request() {
+    @When("^user sends a post Request$")
+    public void user_sends_a_post_Request() throws Throwable {
         request = given().header("Content-Type", "application/json")
                 .header("Accept-Charset", "UFT-8")
                 .log().headers();
     }
 
-    @Then("User should get correct Response")
-    public void user_should_get_correct_response() {
+    @Then("^User should get correct Response$")
+    public void user_should_get_correct_Response() throws Throwable {
         response = request.when().body(user).post("https://jsonplaceholder.typicode.com/users/");
 
         response.then().statusCode(201).log().all();
@@ -61,8 +59,8 @@ public class PostReqStepdefs {
 
 
         JSonResponseHelper.responseValidations(response, expectedResponse);
-
     }
+
 
 
 }

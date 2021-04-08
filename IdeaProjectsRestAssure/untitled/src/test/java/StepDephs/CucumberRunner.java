@@ -9,6 +9,8 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
         features = {"src/test/resources/Features"},
+        glue = {"StepDephs"},
+        format = { "pretty", "html:target/site/cucumber-pretty", "json:src/test/resources/json/cucumber.json" },
         tags={"@Smoke"})
 public class CucumberRunner {
 }
